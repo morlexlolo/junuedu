@@ -41,13 +41,33 @@
         <li class="nav-item">
           <a class="nav-link" href="/faq">F&Q </i></a>
 
-        </li>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-          <li class="nav-item">
-          <a class="nav-link" href="login.html" style="text-align: right;">Login </i>
-          </a>
+                @guest
+                <li class="nav-item"><a href="{{ route('register') }}">Sign Up<i class="fas fa-sign-in-alt"></i></a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="nav-link"><a href="{{ route('login') }}">Login</a></li>
+                @else
+                <li class="nav-link">
+                    <a href="{{ route('users.edit') }}"><i class="fas fa-user"></i>My Profile</a>
+                </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-        </li>
+                <li class="nav-link">
+                    <a  href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
+                </li>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+                @endguest
+
+                </a>
+            </li>
+
+
       </ul>
     </div>
 

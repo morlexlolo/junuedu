@@ -1,7 +1,11 @@
 
 @extends('layouts.app')
+@section('title')
+<title>Junu | Edu {{ $subjectName }}</title>
+@endsection
 
 @section('content')
+@include('layouts.nav')
 <!-- Header -->
 <header class="header header-inverse bg-fixed" style="background-image: url(assets/img/bg-laptop.jpg)" data-overlay="8">
   <div class="container text-center">

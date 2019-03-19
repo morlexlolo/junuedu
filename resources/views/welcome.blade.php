@@ -1,6 +1,11 @@
 @extends('layouts.app')
+@section('title')
+<title>Junu | Edu</title>
+
+@endsection
 
 @section('content')
+@include('layouts.nav')
 @include('layouts.header')
 <!-- Main container -->
 <main class="main-content">

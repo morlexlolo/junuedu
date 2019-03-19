@@ -13,6 +13,13 @@
 
 Route::get('/', 'WelcomePageController@index')->name('welcome');
 Route::get('/past-paper', 'PastPaperController@index')->name('paper.index');
+Route::middleware('auth')->group( function () {
+
+    Route::get('/profile', 'UsersController@edit')->name('users.edit');
+    Route::patch('/profile', 'UsersController@update')->name('users.update');
+
+});
+
 
 Auth::routes();
 

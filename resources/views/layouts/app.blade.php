@@ -6,12 +6,14 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    <title>{{ 'Junu|Edu' }}</title>
+    @yield('title','')
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('assets/css/core.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/thesaas.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
 
 
 
@@ -23,15 +25,15 @@
   <body>
 
 
-  @include('layouts.nav')
 
 
 
 @yield('content')
 
 
-
+<vue-login></vue-login>
 
 @include('layouts.footer')
+
   </body>
 </html>
