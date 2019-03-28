@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddSubjectIdToPastPapers extends Migration
+class AddNameToPastPapers extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +14,7 @@ class AddSubjectIdToPastPapers extends Migration
     public function up()
     {
         Schema::table('past_papers', function (Blueprint $table) {
-            $table->unsignedBigInteger('subject_id');
-            $table->foreign('subject_id')
-                  ->references('id')->on('subjects')
-                  ->onDelete('cascade');
+            $table->string('name')->nullable();
         });
     }
 
@@ -29,9 +26,8 @@ class AddSubjectIdToPastPapers extends Migration
     public function down()
     {
         Schema::table('past_papers', function (Blueprint $table) {
-            //
-            $table->dropForeign(['subject_id']);
-            $table->dropColumn('subject_id');
+            $table->dropColumn('name');
+
         });
     }
 }

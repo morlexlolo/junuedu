@@ -726,6 +726,9 @@ video {
   -webkit-transition: .5s;
   transition: .5s;
 }
+.card-img-top{
+    margin-top: 50px;
+}
 
 .card > .alert,
 .card .card-body .alert {
@@ -819,6 +822,9 @@ video {
 
 .card-bordered {
   border: 1px solid #f1f2f3;
+  width: 70%;
+  height: 90%;
+
 }
 
 .card-shadowed {

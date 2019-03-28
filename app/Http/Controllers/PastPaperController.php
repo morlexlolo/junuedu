@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\PastPaper;
 use Illuminate\Http\Request;
 use App\Subject;
+use Dotenv\Regex\Result;
 
 class PastPaperController extends Controller
 {
@@ -13,30 +14,51 @@ class PastPaperController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $subjects= Subject::all();
         if (request()->subject) {
-            $past_papers=PastPaper::with('subject')->whereHas('subject',function($query){
-                $query->where('slug',request()->subject);
+            $past_papers=PastPaper::with('subject')->whereHas('subject', function ($query) {
+                $query->where('slug', request()->subject);
             });
 
-            $subjectName=optional($subjects->where('slug',request()->subject)->first())->name;
-        }else{
-
-
-        $past_papers =PastPaper::take(12);
-        $subjectName='Subjects';
+            $subjectName=optional($subjects->where('slug', request()->subject)->first())->name;
+        } else {
+            $past_papers =PastPaper::take(12);
+            $subjectName='Subjects';
         }
-        if(request()->sort=='new'){
+        if (request()->sort=='new') {
             $past_papers =$past_papers->orderBy('year')->paginate(6);
-        }elseif(request()->sort=='old'){
-            $past_papers =$past_papers->orderBy('year','desc')->paginate(6);
-        }else{
+        } elseif (request()->sort=='old') {
+            $past_papers =$past_papers->orderBy('year', 'desc')->paginate(6);
+        } else {
             $past_papers=$past_papers->paginate(6);
         }
-        return view('paper.index',compact('subjects','past_papers','subjectName'));
+        return view('paper.index', compact('subjects', 'past_papers', 'subjectName'));
     }
+
+    public function search(Request $request)
+    {
+        $query=$request->input('query');
+        $subjects= Subject::all();
+        // $past_papers =PastPaper::where('file','like',"%$query%")
+        //                         ->orWhere('name','like',"%$query%")
+        //                         ->orWhere('slug','like',"%$query%")->paginate(6);
+        // return view('paper.search_result')->with('past_papers',$past_papers)
+        //                                   ->with('subjects',$subjects);
+
+
+        $past_papers = PastPaper::search($query)->paginate(6);
+        return view('paper.search_result')->with('past_papers',$past_papers)
+                                         ->with('subjects',$subjects);
+    }
+
 
     /**
      * Show the form for creating a new resource.

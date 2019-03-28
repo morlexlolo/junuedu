@@ -25,30 +25,30 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/events">Events </i></a>
+          <a class="nav-link" href="{{ route('event.index') }}">Events </i></a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/about">About </a>
-
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link " href="/contact">Contact </a>
+          <a class="nav-link" href="{{ route('about.index') }}">About </a>
 
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/faq">F&Q </i></a>
+          <a class="nav-link " href="{{ route('contact.index') }}">Contact </a>
+
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('faq.index') }}">F&Q </i></a>
 
         </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                 @guest
-                <li class="nav-item"><a href="{{ route('register') }}">Sign Up<i class="fas fa-sign-in-alt"></i></a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="nav-item"><a href="{{ route('register') }}">Sign Up</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <li class="nav-link"><a href="{{ route('login') }}">Login</a></li>
                 @else
                 <li class="nav-link">
-                    <a href="{{ route('users.edit') }}"><i class="fas fa-user"></i>My Profile</a>
+                    <a href="{{ route('users.edit') }}"></i>My Profile</a>
                 </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                 <li class="nav-link">

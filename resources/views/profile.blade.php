@@ -104,13 +104,13 @@
 
             <div class="form-group">
                 <label for="name">Password :</label>
-                <input class="form-control" name="password" type="password" placeholder="Password">
+                <input class="form-control" name="password" type="password" value="{{ old('name',$user->password) }}" placeholder="Password">
               <b> <small>Leave password blank to keep the current one!</small></b>
             </div>
 
             <div class="form-group">
                 <label for="name">Comfirm Password :</label>
-              <input class="form-control" name="password_confirmation" type="password" placeholder="Confirm (password)">
+              <input class="form-control" name="password_confirmation" type="password" value="{{ old('name',$user->password_confirmation) }}" placeholder="Confirm (password)">
             </div>
 
             <div class="form-group input-group file-group">

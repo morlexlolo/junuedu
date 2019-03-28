@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 @section('title')
-<title>Junu | Edu {{ $subjectName }}</title>
+<title>Junu | Edu {{"search-result" }}</title>
 @endsection
 
 @section('content')
@@ -12,7 +12,7 @@
     <div class="row">
       <div class="col-12 col-lg-8 offset-lg-2">
 
-        <h1>{{ $subjectName }} Exams Papers</h1>
+        <h1> Search {{ request()->input('query') }}: {{ $past_papers->count() }}</h1>
         <p class="fs-18 opacity-70">Find your paper here !</p>
 
       </div>
@@ -53,14 +53,14 @@
         </div>
 
 
-            <nav>
-            <ul class="pagination justify-content-center">
-              <li class="page-item">
-                  <hr>
-                {{ $past_papers->appends(request()->input())->links() }}
-              </li>
-            </ul>
-         </nav>
+        <nav>
+                <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                      <hr>
+                    {{ $past_papers->appends(request()->input())->links() }}
+                  </li>
+                </ul>
+             </nav>
       </div>
 
 
@@ -70,7 +70,7 @@
 
           <h6 class="sidebar-title">Search</h6>
           <form class="input-group" action="{{ route('paper.search') }}" method="GET">
-            <input type="text" name= "query" value="{{ request()->input('query') }}" class="form-control" >
+            <input type="text" name= "query" class="form-control" placeholder="Search">
             <span class="input-group-addon"><i class="ti-search"></i></span>
           </form>
 

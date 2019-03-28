@@ -1,135 +1,28 @@
+<!-- Header -->
+<header class="header header-inverse h-fullscreen pb-80" data-parallax="assets/img/brand.png" data-overlay="8">
+  <div class="container text-center">
 
+    <div class="row h-full">
+      <div class="col-12 col-lg-8 offset-lg-2 align-self-center">
 
-    <!-- Header -->
-    <div class="swiper-container swiper-button-box no-padding">
-      <div class="swiper-wrapper">
+        <h1 class="display-4 hidden-sm-down">Strive to success</h1>
 
-        <!--
-        |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-        | Slide 1
-        |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-        !-->
-        <div class="swiper-slide">
-          <header class="header header-inverse h-fullscreen p-0" style="background-image: url(assets/img/Jubek-State.jpg);" data-overlay="8">
-            <div class="container text-center">
+        <br>
+        <p class="lead text-white fs-20 hidden-sm-down"><span class="fw-400">TheSaaS</span> is a responsive, professional, and multipurpose<br> SaaS template powered with <span class="mark-border">Bootstrap 4</span>.</p>
 
-              <div class="row h-full hidden-md-down">
-                <div class="col-12 col-lg-8 offset-lg-2 align-self-center pt-150">
+        <br><br><br>
 
-                  <h1 class="display-4">Motivational moday</h1>
-                  <br>
-                  <p class="lead text-white fs-20">Learners today leaders tomorrow</p>
-
-                </div>
-
-                <div class="col-12 align-self-end text-center">
-                  <img src="{{ asset('assets/img/brand.png') }}" alt="..." data-aos="fade-up" data-aos-offset="0">
-                </div>
-
-              </div>
-
-
-              <div class="row h-full hidden-lg-up">
-                <div class="col-12 col-lg-8 offset-lg-2 align-self-center">
-                  <h1>TheSaaS</h1>
-                  <br>
-                  <p class="text-white fs-15">Responsive, professional, elegant, and<br> multipurpose SaaS template</p>
-                </div>
-              </div>
-
-            </div>
-          </header>
-
-        </div>
-
-
-
-        <!--
-        |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-        | Slide 2
-        |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-        !-->
-
-        <div class="swiper-slide">
-          <header class="header header-inverse h-fullscreen p-0" style="background-image: url(assets/img/sch-1.jpg);" data-overlay="8">
-            <div class="container text-center">
-
-              <div class="row h-full hidden-md-down">
-                <div class="col-12 col-lg-8 offset-lg-2 align-self-center pt-150">
-
-                  <h1 class="display-4">Motivational moday</h1>
-                  <br>
-                  <p class="lead text-white fs-20">Learners today leaders tomorrow</p>
-
-                </div>
-
-                <div class="col-12 align-self-end text-center">
-                  <img src="{{ asset('assets/img/brand.png') }}" alt="..." data-aos="fade-up" data-aos-offset="0">
-                </div>
-
-              </div>
-
-
-              <div class="row h-full hidden-lg-up">
-                <div class="col-12 col-lg-8 offset-lg-2 align-self-center">
-                  <h1>TheSaaS</h1>
-                  <br>
-                  <p class="text-white fs-15">Responsive, professional, elegant, and<br> multipurpose SaaS template</p>
-                </div>
-              </div>
-
-            </div>
-          </header>
-
-        </div>
-
-
-
-
-        <!--
-        |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-        | Slide 3
-        |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-        !-->
-
-        <div class="swiper-slide">
-          <header class="header header-inverse h-fullscreen p-0" style="background-image: url(assets/img/ss.jpg);" data-overlay="8">
-            <div class="container text-center">
-
-              <div class="row h-full hidden-md-down">
-                <div class="col-12 col-lg-8 offset-lg-2 align-self-center pt-150">
-
-                  <h1 class="display-4">Motivational moday</h1>
-                  <br>
-                  <p class="lead text-white fs-20">Learners today leaders tomorrow</p>
-
-                </div>
-
-                <div class="col-12 align-self-end text-center">
-                  <img src="{{ asset('assets/img/brand.png') }}" alt="..." data-aos="fade-up" data-aos-offset="0">
-                </div>
-
-              </div>
-
-
-              <div class="row h-full hidden-lg-up">
-                <div class="col-12 col-lg-8 offset-lg-2 align-self-center">
-                  <h1>TheSaaS</h1>
-                  <br>
-                  <p class="text-white fs-15">Responsive, professional, elegant, and<br> multipurpose SaaS template</p>
-                </div>
-              </div>
-
-            </div>
-          </header>
-
-        </div>
-
+        <a class="btn btn-lg btn-round w-200 btn-primary mr-16" href="{{ route('faq.index') }}">How to use</a>
+        <a class="btn btn-lg btn-round w-200 btn-outline btn-white hidden-sm-down" href="{{ route('about.index') }}" >Our mission</a>
 
       </div>
 
-      <div class="swiper-button-prev hidden-sm-down"></div>
-      <div class="swiper-button-next hidden-sm-down"></div>
+      <div class="col-12 align-self-end text-center">
+        <a class="scroll-down-1 scroll-down-inverse" href="#" data-scrollto="section-intro"><span></span></a>
+      </div>
+
     </div>
 
-    <!-- END Header -->
+  </div>
+</header>
+<!-- END Header -->
