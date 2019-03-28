@@ -3,7 +3,7 @@
 use App\Subject;
 use App\PastPaper;
 use Illuminate\Support\Facades\Route;
-use Session;
+// use Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +22,8 @@ Route::get('/past-paper/search', 'PastPaperController@search')->name('paper.sear
 
 // events route
 Route::get('/events', 'EventController@index')->name('event.index');
+Route::get('/events/{event}', 'EventController@show')->name('event.show');
+
 Route::get('/contact-us', 'ContactController@index')->name('contact.index');
 Route::post('/contact-us/send', 'ContactController@send')->name('contact.send');
 

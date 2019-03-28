@@ -46,12 +46,14 @@ class EventController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Event  $event
+     * @param  \App\Event  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event)
+    public function show($slug)
     {
-        //
+        $subjects= Subject::get();
+        $event=Event::where( 'slug',$slug)->firstOrFail();
+        return view('event.show',compact('event','subjects'));
     }
 
     /**

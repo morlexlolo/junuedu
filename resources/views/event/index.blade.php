@@ -1,106 +1,111 @@
 
-@extends('layouts.app')
-@section('title')
-<title>Junu | Edu {{ 'Events' }}</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
 
-@endsection
+    <title>TheSaaS - Content blocks</title>
 
-@section('content')
+    <!-- Styles -->
+    <link href="assets/css/core.min.css" rel="stylesheet">
+    <link href="assets/css/thesaas.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicon.png">
+  </head>
+
+  <body class="thesaas-sections-split">
 @include('layouts.nav')
-<!-- Header -->
-<header class="header header-inverse bg-fixed" style="background-image: url(assets/img/bg-laptop.jpg)" data-overlay="8">
-  <div class="container text-center">
-    <div class="row">
-      <div class="col-12 col-lg-8 offset-lg-2">
 
-        <h1>Events</h1>
-        <p class="fs-18 opacity-70">Find your paper here !</p>
+
+
+    <!-- Header -->
+    <header class="header header-inverse bg-fixed" style="background-image: url(assets/img/bg-laptop.jpg)" data-overlay="8">
+      <div class="container text-center">
+
+        <div class="row">
+          <div class="col-12 col-lg-8 offset-lg-2">
+
+            <h1>Content blocks</h1>
+            <p class="fs-18 opacity-70">Develop your pages by copy and pasting ready blocks</p>
+
+          </div>
+        </div>
 
       </div>
-    </div>
-
-  </div>
-</header>
-<!-- END Header -->
-
-
-<!-- Main container -->
-<main class="main-content bg-gray">
-
-            <section class="section">
-                @forelse ($events as $e)
-                <div class="container">
-                        <header class="section-header">
-                          <small><strong>Feature</strong></small>
-                          <h2>{{ $e->title }}</h2>
-                          <hr>
-                          <p class="lead">Venue:{{ $e->location }}</p>
-                        </header>
-
-
-
-                        <div class="row gap-y">
-
-                          <div class="col-12 offset-md-2 col-md-8 mb-30">
-                            <img src="{{ Voyager::image( $e->image ) }}
-
-                            " alt="..." data-aos="fade-up" data-aos-duration="2000">
-                          </div>
-<hr>
-                          <div class="col-12 col-md-6 col-xl-4">
-                            <div class="flexbox gap-items-4">
-                              <div>
-                                    <h5><i class="fa fa-tv fs-20 mr-5 text-secondary"></i>Date: <small>{{ $e->date }}</small></h5>
-                              </div>
-                            </div>
-                          </div>
-
-
-                          <div class="col-12 col-md-6 col-xl-4">
-                            <div class="flexbox gap-items-4">
-                              <div>
-                                <h5><i class="fa fa-wrench fs-25 mr-5 text-secondary"></i>Staring time: <small>{{ $e->starting }}</small></h5>
-                              </div>
-                            </div>
-                          </div>
-
-
-                          <div class="col-12 col-md-6 col-xl-4">
-                            <div class="flexbox gap-items-4">
-                              <div>
-                              <h5><i class="fa fa-cubes fs-25 pt-4 text-secondary"></i>Ending time : <small>{{ $e->ending }}</small></h5>
-                              </div>
-
-
-                            </div>
-                          </div>
-
-                          <div class="col-12 text-center">
-                            <br><br>
-                            <a class="btn btn-lg btn-primary" href="#">See more Features</a>
-                          </div>
-
-                        </div>
-
-                      </div>
-                      <br>
-                      <hr>
-                @empty
-
-                @endforelse
-
-            </section>
-</main>
-<!-- END Main container -->
-
-@endsection
+    </header>
+    <!-- END Header -->
 
 
 
 
+    <!-- Main container -->
+    <main class="main-content">
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Content 2
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <h6 class="section-info" id="content-2"><a href="#content-2">Content 2</a></h6>
+
+
+      <section class="section">
+        <div class="container">
+
+            @foreach ($events as $e)
+
+
+          <div class="row gap-y align-items-center">
+            <div class="col-12 col-md-6">
+              <img class="rounded" src="{{ Voyager::image( $e->image ) }}" alt="..." data-aos="fade-in">
+            </div>
+
+
+            <div class="col-12 col-md-6">
+              <h3>{{ $e->title }}</h3>
+              <br>
+             <p>{{ Str::limit($e->description, 70) }}</p>
+             <div class="list">
+                <p><i class="fas fa-clock"></i> Starts : {{\Carbon\Carbon::createFromFormat('H:i:s',$e->starting)->format('h:i:a')}}</p>
+                <p><i class="fas fa-clock"></i> Ends : {{\Carbon\Carbon::createFromFormat('H:i:s',$e->ending)->format('h:i:a')}}</p>
+
+             </div>
+             <div class="list-item">
+                    <p><i class="fas fa-map-marker-alt"></i> Venue : {{ $e->location }}</p>
+                    <p><i class="fas fa-calendar-alt"></i> Date : {{ \Carbon\Carbon::parse($e->date)->format('d/m/Y')}}</p>
+
+             </div>
+              <a class="btn btn-outline btn-primary no-shadow" href="{{ route('event.show', ['slug' => $e->slug]) }}">Read More <i class="ti-arrow-right fs-9 ml-4"></i></a>
+            </div>
+
+          </div>
+          <br>
+          <hr>
+          @endforeach
+        </div>
+      </section>
 
 
 
+    </main>
+    <!-- END Main container -->
+
+
+@include('layouts.footer')
 
 
 
+    <!-- Scripts -->
+    <script src="assets/js/core.min.js"></script>
+    <script src="assets/js/thesaas.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+  </body>
+</html>
