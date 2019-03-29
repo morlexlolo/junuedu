@@ -40,25 +40,54 @@
 
       <div class="row gap-y">
         <div class="col-12 col-md-6">
+                @if(Session::has('success'))
+                <div class="alert alert-success">
+                  {{ Session::get('success') }}
+                </div>
+             @endif
 
-          <form action="{{ route('contact.send') }}" method="POST">
+          <form action="{{ route('contact.store') }}" method="POST">
             @csrf
             {{--  <div class="alert alert-success">We received your message and will contact you back soon.</div>  --}}
 
             <div class="form-group">
-              <input class="form-control form-control-lg" type="text" name="name" placeholder="Your Name">
+              <input class="form-control form-control-lg{{ $errors->has('name') ? ' is-invalid' : '' }}" type="text" name="name" placeholder="Your Name">
+              @if ($errors->has('name'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('name') }}</strong>
+                    </span>
+                @endif
             </div>
 
             <div class="form-group">
-              <input class="form-control form-control-lg" type="email" name="email" placeholder="Your Email Address">
+              <input class="form-control form-control-lg{{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" name="email" placeholder="Your Email Address">
+              @if ($errors->has('email'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('email') }}</strong>
+                    </span>
+                @endif
             </div>
 
             <div class="form-group">
-              <textarea class="form-control form-control-lg" name="message" rows="4" placeholder="Your Message"></textarea>
+                <input class="form-control form-control-lg {{ $errors->has('phnoe') ? ' is-invalid' : '' }}" type="phone" name="phone" placeholder="Your Phone Number">
+                @if ($errors->has('phone'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('phone') }}</strong>
+                </span>
+            @endif
+            </div>
+
+            <div class="form-group">
+              <textarea class="form-control form-control-lg {{ $errors->has('message') ? ' is-invalid' : '' }}" name="message" rows="4" placeholder="Your Message"></textarea>
+              @if ($errors->has('message'))
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $errors->first('message') }}</strong>
+                    </span>
+                @endif
             </div>
 
 
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Send Enquiry</button>
+            <button class="btn btn-lg btn-primary btn-block" name="submit" type="submit">Send Enquiry</button>
           </form>
 
         </div>

@@ -29,6 +29,6 @@ class ContactMail extends Mailable
      */
     public function build(Request $request)
     {
-        return $this->view('mail')->to('stephenvicson@gmail.com');
+        return $this->view('mail');
     }
 }

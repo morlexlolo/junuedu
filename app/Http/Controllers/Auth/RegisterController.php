@@ -68,5 +68,10 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        Session::flash('register','You are successfully register with us check your email for verification!');
+
+
+
     }
 }

@@ -25,7 +25,7 @@ Route::get('/events', 'EventController@index')->name('event.index');
 Route::get('/events/{event}', 'EventController@show')->name('event.show');
 
 Route::get('/contact-us', 'ContactController@index')->name('contact.index');
-Route::post('/contact-us/send', 'ContactController@send')->name('contact.send');
+Route::post('/contact-us/send', 'ContactController@store')->name('contact.store');
 
 Route::get('/about-us', 'AboutController@index')->name('about.index');
 Route::get('/faq', 'FaqController@index')->name('faq.index');

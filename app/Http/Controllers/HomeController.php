@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Subject;
+use App\PastPaper;
+use App\Event;
+use App\Post;
 
 class HomeController extends Controller
 {
@@ -23,6 +27,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $past_papers = PastPaper::inRandomOrder()->limit(3)->get();
+        $events = Event::all()->take(3);
+        $subjects= Subject::get();
+        $posts = Post::all();
+        return view('welcome',compact('subjects','posts','events','past_papers'));
     }
 }

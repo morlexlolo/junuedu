@@ -4,7 +4,7 @@
       <div class="row gap-y">
         <div class="col-12 col-md-12 col-lg-4">
           <h6 class="heading-alt text-uppercase fs-14 mb-16">
-            <img src="{{ asset('assets/img/brand.png') }}" alt="logo">
+            <a href="/"><img src="{{ asset('assets/img/brand.png') }}" alt="logo"></a>
           </h6>
 
           <p class="text-light">Copyright © 2019 <a class="text-light" href="/">JunuEdu</a>. All rights reserved.</p>
@@ -70,4 +70,11 @@
         toastr.success('{{ Session::get('subscribed') }}')
 
         @endif
+        @if(Session::has('success'))
+            toastr.success('{{ Session::get('success') }}')
+        @endif
+        @if(Session::has('register'))
+        toastr.success('{{ Session::get('register') }}')
+    @endif
+
     </script>
