@@ -17,10 +17,12 @@ class WelcomePageController extends Controller
     public function index()
     {
         $past_papers = PastPaper::inRandomOrder()->limit(3)->get();
-        $events = Event::all()->take(3);
-        $subjects= Subject::get();
+        $events = Event::latest()->limit(3)->get();
+        $eventss = Event::all();
+
+        $subjects= Subject::orderBy('name')->get();
         $posts = Post::all();
-        return view('welcome',compact('subjects','posts','events','past_papers'));
+        return view('welcome',compact('subjects','posts','events','past_papers','eventss'));
     }
 
     /**

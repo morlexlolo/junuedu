@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 //papers routes
 Route::get('/', 'WelcomePageController@index')->name('welcome');
 Route::get('/past-paper', 'PastPaperController@index')->name('paper.index');
@@ -62,3 +63,17 @@ Route::post('/subscribe', function() {
 
     return redirect()->back();
 });
+
+// Logging in with social media accounts route
+
+Route::get('login/{provider}', 'SocialController@redirect');
+Route::get('login/{provider}/callback','SocialController@Callback');
+
+
+// no captcha route
+Route::get('recaptchacreate', 'RecaptchaController@create');
+Route::post('store', 'RecaptchaController@store');
+
+// logging out route
+
+Route::get('logout', 'Auth\LoginController@logout');

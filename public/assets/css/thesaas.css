@@ -5077,9 +5077,10 @@ ul.flexbox {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   flex-shrink: 0;
   margin-right: 16px;
+  color: red;
 }
 
 .topbar-nav {
@@ -5101,6 +5102,8 @@ ul.flexbox {
 .topbar-nav .nav-item:hover > .nav-link,
 .topbar-nav .nav-item.show > .nav-link {
   opacity: 1;
+  color: #0e97ff;
+
 }
 
 .topbar-nav .nav-item + .nav-item {
@@ -5120,6 +5123,7 @@ ul.flexbox {
 
 .topbar-nav .nav-link:hover, .topbar-nav .nav-link:focus, .topbar-nav .nav-link.active {
   opacity: 1;
+  color: #0e97ff;
 }
 
 .topbar-nav .nav-link.active {
@@ -5795,6 +5799,7 @@ ul.flexbox {
   position: relative;
   border-bottom: none;
   background-position: center;
+  opacity:initial;
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;

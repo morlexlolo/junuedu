@@ -1,78 +1,32 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                <meta name="description" content="">
+                <meta name="keywords" content="">
 
-@section('content')
-<div class="container">
-    {{-- <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                @yield('title','')
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+                <!-- Styles -->
+                <link rel="stylesheet" href="{{ asset('assets/css/core.min.css') }}">
+                <link rel="stylesheet" href="{{ asset('assets/css/thesaas.css') }}">
+                <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+                    {{--  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">
+                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">  --}}
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
 
-                                @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                <!-- Favicons -->
+                <link rel="apple-touch-icon" href="{{ asset('assets/img/brand.png') }}">
+                <link rel="icon" href="{{ asset('assets/img/brand.png') }}">
+              </head>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+  <body class="mh-fullscreen bg-img center-vh p-20" style="background-image: url(assets/img/test2.jpg);">
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
 
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div> --}}
     <div class="card card-shadowed p-50 w-400 mb-0" style="max-width: 100%">
             <h5 class="text-uppercase text-center">Register</h5>
             <br><br>
@@ -121,14 +75,29 @@
               </div> --}}
 
               <br>
-              <button class="btn btn-bold btn-block btn-primary" type="submit">Register</button>
+              <button class="btn btn-bold btn-block btn-success" type="submit">Register</button>
             </form>
+            <p class="text-center text-muted fs-13 mt-20">Have an account? <a href="{{ route('login') }}"><div class="form-group">
+                    <button class="btn btn-bold btn-block btn-primary" type="submit">Login Here !</button>
+                  </div></a></p>
 
-            <hr class="w-30">
 
-            <p class="text-center text-muted fs-13 mt-20">Already have an account? <a href="{{ route('login') }}">Sign in</a></p>
+                  <div class="text-center">
+                      <a style="" href="/">Go back home</a>
+                  </div>
           </div>
 
 
 </div>
-@endsection
+
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/core.min.js"></script>
+    <script src="assets/js/thesaas.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+  </body>
+</html>
+

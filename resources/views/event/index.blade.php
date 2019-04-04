@@ -1,24 +1,28 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+        <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                <meta name="description" content="">
+                <meta name="keywords" content="">
 
-    <title>TheSaaS - Content blocks</title>
+                @yield('title','')
 
-    <!-- Styles -->
-    <link href="assets/css/core.min.css" rel="stylesheet">
-    <link href="assets/css/thesaas.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+                <!-- Styles -->
+                <link rel="stylesheet" href="{{ asset('assets/css/core.min.css') }}">
+                <link rel="stylesheet" href="{{ asset('assets/css/thesaas.css') }}">
+                <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+                    {{--  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">
+                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">  --}}
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-    <link rel="icon" href="assets/img/favicon.png">
-  </head>
+
+
+                <!-- Favicons -->
+                <link rel="apple-touch-icon" href="{{ asset('assets/img/brand.png') }}">
+                <link rel="icon" href="{{ asset('assets/img/brand.png') }}">
+              </head>
 
   <body class="thesaas-sections-split">
 @include('layouts.nav')
@@ -26,14 +30,14 @@
 
 
     <!-- Header -->
-    <header class="header header-inverse bg-fixed" style="background-image: url(assets/img/bg-laptop.jpg)" data-overlay="8">
+    <header class="header header-inverse bg-fixed" style="background-image: url(assets/img/header-ss.jpg)" data-overlay="8">
       <div class="container text-center">
 
         <div class="row">
           <div class="col-12 col-lg-8 offset-lg-2">
 
-            <h1>Content blocks</h1>
-            <p class="fs-18 opacity-70">Develop your pages by copy and pasting ready blocks</p>
+            <h1>More than {{ $eventss->count() }} waiting for you!</h1>
+            <p class="fs-18 opacity-70">Get update with the events around the country in education</p>
 
           </div>
         </div>
@@ -53,7 +57,7 @@
       | Content 2
       |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
       !-->
-      <h6 class="section-info" id="content-2"><a href="#content-2">Content 2</a></h6>
+      <h6 class="section-info" id="content-2"><a href="#content-2">Events</a></h6>
 
 
       <section class="section">
@@ -64,14 +68,14 @@
 
           <div class="row gap-y align-items-center">
             <div class="col-12 col-md-6">
-              <img class="rounded" src="{{ Voyager::image( $e->image ) }}" alt="..." data-aos="fade-in">
+              <img class="rounded" src="{{ Voyager::image( $e->image ) }}" alt="..." data-aos="fade-in" onerror="this.style.display='none'"/>
             </div>
 
 
             <div class="col-12 col-md-6">
               <h3>{{ $e->title }}</h3>
               <br>
-             <p>{{ Str::limit($e->description, 70) }}</p>
+             <p>{{ Str::limit($e->description, 140) }}</p>
              <div class="list">
                 <p><i class="fas fa-clock"></i> Starts : {{\Carbon\Carbon::createFromFormat('H:i:s',$e->starting)->format('h:i:a')}}</p>
                 <p><i class="fas fa-clock"></i> Ends : {{\Carbon\Carbon::createFromFormat('H:i:s',$e->ending)->format('h:i:a')}}</p>
@@ -89,6 +93,14 @@
           <br>
           <hr>
           @endforeach
+          <nav>
+                <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                      <hr>
+                    {{ $events->appends(request()->input())->links() }}
+                  </li>
+                </ul>
+             </nav>
         </div>
       </section>
 

@@ -8,7 +8,7 @@
 @section('content')
 @include('layouts.nav')
 <!-- Header -->
-<header class="header header-inverse bg-fixed" style="background-image: url(assets/img/bg-laptop.jpg)" data-overlay="8">
+<header class="header header-inverse bg-fixed" style="background-image: url(assets/img/header-ss.jpg)" data-overlay="8">
   <div class="container text-center">
     <div class="row">
       <div class="col-12 col-lg-8 offset-lg-2">
@@ -37,7 +37,7 @@
     <div class="container">
       <header class="section-header">
         <small>Faq</small>
-        <h2>Usage</h2>
+        <h2>App</h2>
         <hr>
       </header>
 
@@ -50,7 +50,7 @@
 
           <div id="collapse-general-1" class="collapse in">
             <div class="card-block">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                    JunuEdu is web application that provide high school students iin south sudan to get access to exams papers and events in the country about the.
             </div>
           </div>
         </div>
@@ -58,12 +58,12 @@
 
         <div class="card">
           <h5 class="card-title">
-            <a data-toggle="collapse" data-parent="#accordion-general" href="#collapse-general-2">Where can I learn more about how to use TheSaaS?</a>
+            <a data-toggle="collapse" data-parent="#accordion-general" href="#collapse-general-2">How can i use junuedu?</a>
           </h5>
 
           <div id="collapse-general-2" class="collapse">
             <div class="card-block">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+              To use junuedu you need to register first so that you can access unlimited sources.
             </div>
           </div>
         </div>
@@ -71,12 +71,12 @@
 
         <div class="card">
           <h5 class="card-title">
-            <a data-toggle="collapse" data-parent="#accordion-general" href="#collapse-general-3">Where can I get more details about your security practices?</a>
+            <a data-toggle="collapse" data-parent="#accordion-general" href="#collapse-general-3">How can i register?</a>
           </h5>
 
           <div id="collapse-general-3" class="collapse">
             <div class="card-block">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+             To register you need to go to the register page and the provide your credential in the form.
             </div>
           </div>
         </div>
@@ -84,12 +84,12 @@
 
         <div class="card">
           <h5 class="card-title">
-            <a data-toggle="collapse" data-parent="#accordion-general" href="#collapse-general-4">Where can I get more details about your security practices?</a>
+            <a data-toggle="collapse" data-parent="#accordion-general" href="#collapse-general-4">How can i login the system?</a>
           </h5>
 
           <div id="collapse-general-4" class="collapse">
             <div class="card-block">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+              For you to log in the system you need to register first or login with your social media account etc Facebook,Google,Twitter.
             </div>
           </div>
         </div>
@@ -97,12 +97,12 @@
 
         <div class="card">
           <h5 class="card-title">
-            <a data-toggle="collapse" data-parent="#accordion-general" href="#collapse-general-5">What is TheSaaS’s approach to data privacy?</a>
+            <a data-toggle="collapse" data-parent="#accordion-general" href="#collapse-general-5">How can i contact Junuedu?</a>
           </h5>
 
           <div id="collapse-general-5" class="collapse">
             <div class="card-block">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+              To contact us you can go to the contact page and find our address or you can use the contact form to contact us direct to our email thanks.
             </div>
           </div>
         </div>
@@ -119,14 +119,14 @@
 
   <!--
   |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-  | FAQ - License
+  | FAQ - Past papers
   |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
   !-->
   <section class="section bg-grey">
     <div class="container">
       <header class="section-header">
         <small>Faq</small>
-        <h2>License</h2>
+        <h2>Past papers</h2>
         <hr>
       </header>
 
@@ -134,12 +134,12 @@
       <div class="accordion" id="accordion-license">
         <div class="card">
           <h5 class="card-title">
-            <a data-toggle="collapse" data-parent="#accordion-license" href="#collapse-license-1">What is reqular license?</a>
+            <a data-toggle="collapse" data-parent="#accordion-license" href="#collapse-license-1">How can i get access to the past papers?</a>
           </h5>
 
           <div id="collapse-license-1" class="collapse in">
             <div class="card-block">
-              Regular license can be used for end products that do not charge users for access or service(access is free and there will be no monthly subscription fee). Single regular license can be used for single end product and end product can be used by you or your client. If you want to sell end product to multiple clients then you will need to purchase separate license for each client. The same rule applies if you want to use the same end product on multiple domains(unique setup).
+              To get an access to the past papers you need to register with us first.
             </div>
           </div>
         </div>
@@ -147,12 +147,12 @@
 
         <div class="card">
           <h5 class="card-title">
-            <a data-toggle="collapse" data-parent="#accordion-license" href="#collapse-license-2">What is extended license?</a>
+            <a data-toggle="collapse" data-parent="#accordion-license" href="#collapse-license-2">How can i download the past papers?</a>
           </h5>
 
           <div id="collapse-license-2" class="collapse">
             <div class="card-block">
-              Extended license can be used for end products(web service or SAAS) that charges users for access or service(e.g: monthly subscription fee). Single extended license can be used for single end product and end product can be used by you or your client. If you want to sell end product to multiple clients then you will need to purchase separate extended license for each client. The same rule applies if you want to use the same end product on multiple domains(unique setup).
+              To download the past paper is easy all you to do is login and search for the paper and download.
             </div>
           </div>
         </div>
@@ -160,12 +160,12 @@
 
         <div class="card">
           <h5 class="card-title">
-            <a data-toggle="collapse" data-parent="#accordion-license" href="#collapse-license-3">Where can I find your Terms of Service (TOS)?</a>
+            <a data-toggle="collapse" data-parent="#accordion-license" href="#collapse-license-3">Is the services offer by junuedu free?</a>
           </h5>
 
           <div id="collapse-license-3" class="collapse">
             <div class="card-block">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+              Yes, the services offer by us is completely free of charge as we eager to help our students.
             </div>
           </div>
         </div>
@@ -183,14 +183,14 @@
 
   <!--
   |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
-  | FAQ - Payment
+  | FAQ - Events
   |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
   !-->
   <section class="section">
     <div class="container">
       <header class="section-header">
         <small>Faq</small>
-        <h2>Payment</h2>
+        <h2>Events</h2>
         <hr>
       </header>
 
@@ -198,12 +198,12 @@
       <div class="accordion" id="accordion-payment">
         <div class="card">
           <h5 class="card-title">
-            <a data-toggle="collapse" data-parent="#accordion-payment" href="#collapse-payment-1">Can I use TheSaaS for free?</a>
+            <a data-toggle="collapse" data-parent="#accordion-payment" href="#collapse-payment-1">What are events?</a>
           </h5>
 
           <div id="collapse-payment-1" class="collapse in">
             <div class="card-block">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+             Events are      thing that happens or takes place, especially one of importance..
             </div>
           </div>
         </div>
@@ -211,84 +211,15 @@
 
         <div class="card">
           <h5 class="card-title">
-            <a data-toggle="collapse" data-parent="#accordion-payment" href="#collapse-payment-2">What payment services do you support?</a>
+            <a data-toggle="collapse" data-parent="#accordion-payment" href="#collapse-payment-2">How can recieve an update about the events?</a>
           </h5>
 
           <div id="collapse-payment-2" class="collapse">
             <div class="card-block">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+              To recieve an update about events all you need to do is subscribe to our daily newsletter where we update our users with weekly events.
             </div>
           </div>
         </div>
-
-
-        <div class="card">
-          <h5 class="card-title">
-            <a data-toggle="collapse" data-parent="#accordion-payment" href="#collapse-payment-3">Can I cancel my subscription?</a>
-          </h5>
-
-          <div id="collapse-payment-3" class="collapse">
-            <div class="card-block">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-            </div>
-          </div>
-        </div>
-
-
-        <div class="card">
-          <h5 class="card-title">
-            <a data-toggle="collapse" data-parent="#accordion-payment" href="#collapse-payment-4">Is this a secure site for purchases?</a>
-          </h5>
-
-          <div id="collapse-payment-4" class="collapse">
-            <div class="card-block">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-            </div>
-          </div>
-        </div>
-
-
-        <div class="card">
-          <h5 class="card-title">
-            <a data-toggle="collapse" data-parent="#accordion-payment" href="#collapse-payment-5">Can I update my card details?</a>
-          </h5>
-
-          <div id="collapse-payment-5" class="collapse">
-            <div class="card-block">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-            </div>
-          </div>
-        </div>
-
-
-        <div class="card">
-          <h5 class="card-title">
-            <a data-toggle="collapse" data-parent="#accordion-payment" href="#collapse-payment-6">What if I want to change plans?</a>
-          </h5>
-
-          <div id="collapse-payment-6" class="collapse">
-            <div class="card-block">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-            </div>
-          </div>
-        </div>
-
-
-        <div class="card">
-          <h5 class="card-title">
-            <a data-toggle="collapse" data-parent="#accordion-payment" href="#collapse-payment-7">How long are your contracts?</a>
-          </h5>
-
-          <div id="collapse-payment-7" class="collapse">
-            <div class="card-block">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
     </div>
   </section>
 

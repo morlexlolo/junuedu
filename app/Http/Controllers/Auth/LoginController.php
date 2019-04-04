@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Subject;
+
+
+
 
 class LoginController extends Controller
 {
@@ -38,4 +40,7 @@ class LoginController extends Controller
         $subjects= Subject::all();
         $this->middleware('guest')->except('logout');
     }
+
+
+
 }

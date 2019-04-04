@@ -30,7 +30,7 @@
 
 
         <div class="col-12 col-md-4 col-lg-3">
-          <h6 class="heading-alt text-uppercase fs-14 mb-3">Subscribe</h6>
+          <h6 class="heading-alt text-uppercase fs-14 mb-3">Subscribe to our daily events</h6>
 
           <form class="form-inline justify-content-center justify-content-lg-end" action="/subscribe" method="post" >
             @csrf
@@ -70,11 +70,9 @@
         toastr.success('{{ Session::get('subscribed') }}')
 
         @endif
+
         @if(Session::has('success'))
             toastr.success('{{ Session::get('success') }}')
         @endif
-        @if(Session::has('register'))
-        toastr.success('{{ Session::get('register') }}')
-    @endif
 
     </script>

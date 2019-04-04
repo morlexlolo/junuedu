@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Subject;
 
 class UsersController extends Controller
 {
@@ -57,7 +58,9 @@ class UsersController extends Controller
     public function edit()
     {
 
-        return view('profile')->with('user',auth()->user());
+        $subjects= Subject::get();
+        return view('profile',compact('subjects'))->with('user',auth()->user());
+
     }
 
     /**

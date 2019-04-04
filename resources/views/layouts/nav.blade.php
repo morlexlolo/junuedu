@@ -35,7 +35,6 @@
 
         <li class="nav-item">
           <a class="nav-link " href="{{ route('contact.index') }}">Contact </a>
-
         </li>
 
         <li class="nav-item">
@@ -44,8 +43,8 @@
         </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                 @guest
-                <li class="nav-item"><a href="{{ route('register') }}">Sign Up</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <li class="nav-link"><a href="{{ route('login') }}">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('register') }}"><i class="fa fa-sign-in-alt"></i>Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                 @else
                 <li class="nav-link">
                     <a href="{{ route('users.edit') }}"></i>My Profile</a>

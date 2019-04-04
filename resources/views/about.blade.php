@@ -8,7 +8,7 @@
 @section('content')
 @include('layouts.nav')
 <!-- Header -->
-<header class="header header-inverse bg-fixed" style="background-image: url(assets/img/bg-laptop.jpg)" data-overlay="8">
+<header class="header header-inverse bg-fixed" style="background-image: url(assets/img/header-ss.jpg)" data-overlay="8">
   <div class="container text-center">
     <div class="row">
       <div class="col-12 col-lg-8 offset-lg-2">
@@ -103,7 +103,7 @@
               </a>
               <h5>Stephen Victor</h5>
               <small>Co-Founder & CEO</small>
-              <p>Signs you will a, life itself to in signs seed under fruitful good open behold Our of stars whales forth greater.</p>
+              <p>Stephen is the founder and developer in the junuedu.</p>
               <br>
               <div class="social social-boxed social-rounded social-gray">
                 <a class="social-facebook" href="#"><i class="fa fa-facebook"></i></a>
@@ -120,7 +120,7 @@
               </a>
               <h5>Doreen</h5>
               <small>Co-Founder & CTO</small>
-              <p>So firmament sea them sea. Set saying land signs had the us replenish seed moved rule, place let.</p>
+              <p>Doreen is the Co-Founder and an auditor in junuedu.</p>
               <br>
               <div class="social social-boxed social-rounded social-gray">
                 <a class="social-facebook" href="#"><i class="fa fa-facebook"></i></a>
@@ -137,7 +137,7 @@
               </a>
               <h5>Maxime</h5>
               <small>Director</small>
-              <p>Given of living created living fifth him Give heaven made open day, own land hath one him darkness.</p>
+              <p>Maxime is the director and a market advisor in junuedu.</p>
               <br>
               <div class="social social-boxed social-rounded social-gray">
                 <a class="social-facebook" href="#"><i class="fa fa-facebook"></i></a>

@@ -8,7 +8,7 @@
 @section('content')
 @include('layouts.nav')
 <!-- Header -->
-<header class="header header-inverse bg-fixed" style="background-image: url(assets/img/bg-laptop.jpg)" data-overlay="8">
+<header class="header header-inverse bg-fixed" style="background-image: url(assets/img/header-ss.jpg)" data-overlay="8">
   <div class="container text-center">
     <div class="row">
       <div class="col-12 col-lg-8 offset-lg-2">
@@ -85,10 +85,21 @@
                     </span>
                 @endif
             </div>
+            <div class="">
+                    <div class="col-md-4"></div>
+                    <div class="form-group col-md-4">
+                    <label for="ReCaptcha">Confirm you are human:</label>
+                    {!! NoCaptcha::renderJs() !!}
+                    {!! NoCaptcha::display() !!}
+                      </div>
+             </div>
 
 
             <button class="btn btn-lg btn-primary btn-block" name="submit" type="submit">Send Enquiry</button>
           </form>
+
+
+
 
         </div>
 
@@ -128,7 +139,7 @@
   | Map
   |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
   !-->
-  <div class="h-400" data-provide="map" data-lat="44.540" data-lng="-78.556" data-marker-lat="44.540" data-marker-lng="-78.556" data-zoom="6" data-style="light"></div>
+  {{-- <div class="h-400" data-provide="map" data-lat="44.540" data-lng="-78.556" data-marker-lat="44.540" data-marker-lng="-78.556" data-zoom="6" data-style="light"></div> --}}
 
 
 

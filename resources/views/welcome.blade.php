@@ -47,32 +47,33 @@
                 <div class="container">
                   <div class="text-center mb-70">
                     <h2>Upcoming events</h2
-                    <p>More than 80 events are waiting for you</p>
+                    <p>More than {{ $eventss->count() }} events are waiting for you</p>
                   </div>
 
 
                   <div class="row gap-y">
                       @forelse ($events as $e)
 
-                      @empty
 
-                      @endforelse
 
                     <div class="col-12 col-lg-4">
                       <div class="card card-inverse">
                         <div class="card-block">
-                          <h5 class="card-title">How to add new block to page builder</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title.</p>
-                          <a class="fw-600 fs-12" href="#">Read more <i class="fa fa-chevron-right fs-9 pl-8"></i></a>
+                         <a href="{{ route('event.show', ['slug' => $e->slug]) }}"> <h5 class="card-title">{{ $e->title }}</h5></a>
+                          <p class="card-text">{{ Str::limit($e->description, 120) }}</p>
+                          <a class="fw-600 fs-12" href="{{ route('event.show', ['slug' => $e->slug]) }}">Read more <i class="fa fa-chevron-right fs-9 pl-8"></i></a>
                         </div>
                       </div>
                     </div>
+                    @empty
+
+                    @endforelse
 
                   </div>
 
 
                   <div class="text-center mt-50">
-                    <a class="btn btn-outline btn-white no-shadow" href="#">All articles</a>
+                    <a class="btn btn-outline btn-white no-shadow" href="{{ route('event.index')}}">All Events</a>
                   </div>
 
 
@@ -84,8 +85,7 @@
 </main>
 <!-- END Main container -->
 
-
-
-
-
 @endsection
+
+
+

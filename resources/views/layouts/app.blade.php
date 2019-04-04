@@ -19,8 +19,8 @@
 
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="{{ asset('assets/img/apple-touch-icon.png')}}">
-    <link rel="icon" href="{{ asset('assets/img/favicon.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('assets/img/brand.png') }}">
+    <link rel="icon" href="{{ asset('assets/img/brand.png') }}">
   </head>
 
   <body>
@@ -32,4 +32,6 @@
 @include('layouts.footer')
 
   </body>
+
 </html>
+

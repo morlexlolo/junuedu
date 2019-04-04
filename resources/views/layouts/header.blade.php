@@ -1,5 +1,5 @@
 <!-- Header -->
-<header class="header header-inverse h-fullscreen pb-80" data-parallax="assets/img/brand.png" data-overlay="8">
+<header class="header header-inverse h-fullscreen pb-80" data-parallax="assets/img/test2.jpg" data-overlay="8">
   <div class="container text-center">
 
     <div class="row h-full">
@@ -8,7 +8,7 @@
         <h1 class="display-4 hidden-sm-down">Strive to success</h1>
 
         <br>
-        <p class="lead text-white fs-20 hidden-sm-down"><span class="fw-400">TheSaaS</span> is a responsive, professional, and multipurpose<br> SaaS template powered with <span class="mark-border">Bootstrap 4</span>.</p>
+        <p class="lead text-white fs-20 hidden-sm-down"><span class="fw-400">Junuedu</span> <br>  is a high school system  for students in south sudan.</p>
 
         <br><br><br>
 

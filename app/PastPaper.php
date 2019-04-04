@@ -3,12 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Laravel\Scout\Searchable;
+
 use Nicolaslopezj\Searchable\SearchableTrait;
 
 class PastPaper extends Model
 {
-    use Searchable;
+
     use SearchableTrait;
 
     /**
@@ -37,8 +37,5 @@ class PastPaper extends Model
         return $this->belongsTo('App\Subject');
     }
 
-    public function searchableAs()
-    {
-        return 'year';
-    }
+
 }

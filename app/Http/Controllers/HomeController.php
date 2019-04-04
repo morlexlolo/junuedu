@@ -29,8 +29,10 @@ class HomeController extends Controller
     {
         $past_papers = PastPaper::inRandomOrder()->limit(3)->get();
         $events = Event::all()->take(3);
+        $eventss = Event::all();
+
         $subjects= Subject::get();
         $posts = Post::all();
-        return view('welcome',compact('subjects','posts','events','past_papers'));
+        return view('welcome',compact('subjects','posts','events','past_papers','eventss'));
     }
 }

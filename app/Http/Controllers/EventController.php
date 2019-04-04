@@ -6,6 +6,8 @@ use App\Event;
 use Illuminate\Http\Request;
 use App\Subject;
 use Carbon\Carbon;
+use Mtownsend\ReadTime\ReadTime;
+
 
 
 class EventController extends Controller
@@ -17,9 +19,10 @@ class EventController extends Controller
      */
     public function index()
     {
+        $eventss=Event::all();
         $subjects= Subject::get();
-        $events = Event::all();
-        return view('event.index',compact('events','subjects'));
+        $events = Event::paginate(6);
+        return view('event.index',compact('events','subjects','eventss'));
     }
 
     /**
@@ -51,9 +54,11 @@ class EventController extends Controller
      */
     public function show($slug)
     {
+        $readTime = (new ReadTime($slug))->get();
         $subjects= Subject::get();
+        $mightlike=Event::inRandomOrder()->limit(4)->get();
         $event=Event::where( 'slug',$slug)->firstOrFail();
-        return view('event.show',compact('event','subjects'));
+        return view('event.show',compact('event','subjects','mightlike'));
     }
 
     /**
